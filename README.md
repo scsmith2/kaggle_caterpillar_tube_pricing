@@ -24,6 +24,9 @@ The model architecture is shown graphically in below.
 <img src="/imgs/cat_model_architecture.png" width="700"/>
 
 **Script Description and Run Order**
+
+Executing the scripts as they are ordered satisfies input dependencies.
+
 * Training / Competition Data: 20 csv files forming a relational dataset (e.g. part lists, BoMs, material specifications)
 * cat_preproc.R: Cleaning and processing of the original data
 * cat_xgb_1.R:  3 xgboost models with averaged output
@@ -35,4 +38,4 @@ The model architecture is shown graphically in below.
 * cat_rf.R: random forest with 10-fold cross validation
 * cat_combine_1.R: 3 xgboost models, 1 random forest model, 1 support vector machine --- combined by stacking with the training data in a random forest.  The resulting random forest output was then averaged with 3 xgboost models
 * cat_combine_2.R: averaging of the output from cat_kaggle_script.py and cat_combine_1.R
-* cat_stack: 1 support vector machine, 1 random forest and 1 xgboost model --- combined by stacking with the training data in a random forest.  This resulted in the final competition submission.
+* cat_stack.R: 1 support vector machine, 1 random forest and 1 xgboost model --- combined by stacking with the training data in a random forest.  This resulted in the final competition submission.
