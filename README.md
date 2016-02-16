@@ -7,6 +7,7 @@ Predict quoted price for hydraulic tube assemblies based on product and supply c
 The script in this repository resulted in an RMSLE of 0.2181, resulting in an overall position of **95th on the [leaderboard](https://www.kaggle.com/c/caterpillar-tube-pricing/leaderboard/private)** in a field of 1323 individuals and teams.
 
 Submissions were evaluated on the Root Mean Squared Logarithmic Error, calculated as:
+
 ![rmsle](/imgs/rmsle_eqn.png)
 
 Where:
